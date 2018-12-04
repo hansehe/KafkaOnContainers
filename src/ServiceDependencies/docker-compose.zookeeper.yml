@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  zookeeper-service:
+    image: bitnami/zookeeper:latest
+    hostname: zookeeper-service
+    ports:
+      - 2181:2181
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    external: true

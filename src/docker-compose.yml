@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+
+networks:
+  backend_network:
+    external: true

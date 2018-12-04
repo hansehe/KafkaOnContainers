@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  kafka-service:
+    image: bitnami/kafka:latest
+    hostname: kafka-service
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-service:2181
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    external: true
