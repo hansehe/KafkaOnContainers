@@ -9,6 +9,8 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0-preview3-35497" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
         <PackageReference Include="Confluent.Kafka" Version="1.0.0-beta2" />
+        <PackageReference Include="DIPS.Extensions.FluentDbTools.DbProvider" Version="1.0.3" />
+        <PackageReference Include="DIPS.Extensions.FluentDbTools.SqlBuilder" Version="1.0.3" />
     </ItemGroup>
 
 </Project>

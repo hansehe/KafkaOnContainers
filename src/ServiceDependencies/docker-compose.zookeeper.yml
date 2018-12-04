@@ -2,12 +2,12 @@ version: '3.4'
 
 services:
   zookeeper-service:
-    image: bitnami/zookeeper:latest
+    image: confluent/zookeeper
     hostname: zookeeper-service
     ports:
       - 2181:2181
     environment:
-      ALLOW_ANONYMOUS_LOGIN: "yes"
+      zk_id: "1"
     networks:
       - backend_network
 
