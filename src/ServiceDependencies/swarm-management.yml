@@ -6,8 +6,8 @@ volumes:
 
 stacks:
     postgres_db: docker-compose.db.postgres.yml
-    kafka-service: docker-compose.kafka.yml
-    zookeeper-service: docker-compose.zookeeper.yml
+    kafka: docker-compose.kafka.yml
+    zookeeper: docker-compose.zookeeper.yml
     portainer: docker-compose.portainer.yml
 
 env_files:

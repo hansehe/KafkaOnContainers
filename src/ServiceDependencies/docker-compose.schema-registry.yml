@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  kafka-service:
+    image: confluentinc/cp-schema-registry
+    hostname: schema-registry
+    ports:
+      - 9092:9092
+    environment:      
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: zookeeper-service:2181
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    external: true
